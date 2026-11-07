@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Buscar - Zyra</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app-container">
+    
+    <header class="header-topo">
+      <h2 style="font-size: 22px; font-weight: 800; margin-bottom: 16px;">Buscar</h2>
+      <div class="search-bar">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" id="busca-input" placeholder="O que você está procurando?" autofocus>
+      </div>
+    </header>
+
+    <main class="conteudo">
+      <!-- Filtros Rápidos (Categorias) -->
+      <div class="carrossel" style="margin-bottom: 24px;">
+        <button class="btn-filtro ativo" data-cat="todos">Todos</button>
+        <button class="btn-filtro" data-cat="alimentacao">Alimentação</button>
+        <button class="btn-filtro" data-cat="moda">Moda</button>
+        <button class="btn-filtro" data-cat="casa">Casa</button>
+        <button class="btn-filtro" data-cat="artesanato">Artesanato</button>
+      </div>
+
+      <div id="resultados">
+        <p style="font-size: 14px; color: var(--texto-suave);">Digite algo para buscar...</p>
+      </div>
+    </main>
+
+    <!-- BOTTOM NAV (Atualizado com a busca ativa) -->
+    <nav class="bottom-nav">
+      <a href="index.html">
+        <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>Início
+      </a>
+      <a href="buscar.html" class="ativo">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>Buscar
+      </a>
+      <a href="carrinho.html">
+        <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>Compras
+      </a>
+      <a href="cadastro.html">
+        <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>Painel
+      </a>
+    </nav>
+  </div>
+  
+  <style>
+    .btn-filtro {
+      background: var(--fundo-card);
+      border: 1px solid var(--borda-suave);
+      color: var(--texto-suave);
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-filtro.ativo {
+      background: var(--roxo-zyra);
+      border-color: var(--roxo-zyra);
+      color: #fff;
+    }
+  </style>
+
+  <script type="module" src="js/buscar.js"></script>
+</body>
+</html>

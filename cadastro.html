@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel do Lojista - Zyra</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app-container">
+    
+    <header class="page-header" style="display: flex; justify-content: space-between; align-items: center;">
+      <div>
+        <h1>Painel do Lojista</h1>
+        <p>Gerencie sua loja e produtos</p>
+      </div>
+      <button id="btn-logout" style="background:none; border:none; color:var(--roxo-zyra); font-weight:600; font-size:14px; cursor:pointer; display:none;">Sair</button>
+    </header>
+
+    <main class="conteudo" style="padding-top:0">
+      
+      <div id="aviso-login" class="vazio-estado">
+        <div class="icone">🔒</div>
+        <h2>Acesso Restrito</h2>
+        <p>Você precisa entrar na sua conta para gerenciar sua loja.</p>
+        <a href="login.html" class="btn-primario" style="text-decoration:none; margin-top:16px; display:inline-block;">Fazer Login</a>
+      </div>
+
+      <div id="area-logado" style="display:none;">
+        <div id="info-loja" style="margin-bottom: 24px;"></div>
+
+        <div id="secao-loja" style="display:none;">
+          <h3 style="margin-bottom:12px; font-size:16px;">Cadastrar Loja</h3>
+          <form id="form-loja" style="margin-bottom:32px;">
+            <div class="input-group">
+              <label>Nome da loja</label>
+              <input type="text" id="nomeLoja" required placeholder="Ex: Padaria do Bairro">
+            </div>
+            <div class="input-group">
+              <label>Descrição</label>
+              <input type="text" id="descricao" placeholder="O que você vende?">
+            </div>
+            <div class="input-group">
+              <label>Endereço</label>
+              <input type="text" id="endereco" placeholder="Rua, número">
+            </div>
+            <div class="input-group">
+              <label>WhatsApp</label>
+              <input type="text" id="whatsapp" placeholder="(11) 99999-9999">
+            </div>
+            <button type="submit" class="btn-primario">Salvar loja</button>
+            <div id="msg-loja" style="display:none; margin-top:12px;"></div>
+          </form>
+        </div>
+
+        <div id="secao-produtos" style="display:none;">
+          <h3 style="margin-bottom:12px; font-size:16px;">Cadastrar Produto</h3>
+          <form id="form-produto" style="margin-bottom:32px;">
+            <div class="input-group">
+              <label>Nome do produto</label>
+              <input type="text" id="nomeProduto" required placeholder="Ex: Pão de queijo (kg)">
+            </div>
+            <div class="input-group">
+              <label>Descrição</label>
+              <input type="text" id="descProduto" placeholder="Detalhes do produto">
+            </div>
+            <div class="input-group">
+              <label>Preço (R$)</label>
+              <input type="number" id="preco" step="0.01" min="0" required>
+            </div>
+            <div class="input-group">
+              <label>Estoque</label>
+              <input type="number" id="estoque" min="0" value="0">
+            </div>
+            <div class="input-group">
+              <label>URL da imagem</label>
+              <input type="url" id="imagem" placeholder="https://...">
+            </div>
+            <button type="submit" class="btn-primario">Salvar produto</button>
+            <div id="msg-produto" style="display:none; margin-top:12px;"></div>
+          </form>
+        </div>
+
+        <div id="meus-produtos-container" style="display:none;">
+          <h3 style="margin-bottom:12px; font-size:16px;">Meus Produtos</h3>
+          <div id="meus-produtos" class="carrossel"></div>
+        </div>
+      </div>
+    </main>
+
+    <nav class="bottom-nav">
+      <a href="index.html">
+        <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>Início
+      </a>
+      <a href="buscar.html">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>Buscar
+      </a>
+      <a href="carrinho.html">
+        <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>Compras
+      </a>
+      <a href="cadastro.html" class="ativo">
+        <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>Painel
+      </a>
+    </nav>
+  </div>
+  <script type="module" src="js/cadastro.js"></script>
+</body>
+</html>

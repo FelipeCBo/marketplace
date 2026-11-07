@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Zyra - Marketplace Salto</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app-container">
+    
+    <header class="header-topo">
+      <a href="index.html" class="logo-zyra"><span class="z">Z</span>YRA</a>
+      <span class="slogan">Sites para negócios</span>
+      
+      <div class="search-bar" onclick="window.location.href='buscar.html'" style="cursor: pointer;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Pesquisar produtos e lojas" style="pointer-events: none;" readonly>
+      </div>
+    </header>
+
+    <main class="conteudo">
+      <div class="grid-atalhos">
+        <a href="carrinho.html" class="atalho-card">
+          <div class="atalho-icone">🛍️</div>
+          <div><strong>Minhas compras</strong><span>Acompanhe seu pedido</span></div>
+        </a>
+        <a href="buscar.html" class="atalho-card">
+          <div class="atalho-icone">⏱️</div>
+          <div><strong>Acessados recentes</strong><span>Continue de onde parou</span></div>
+        </a>
+        <a href="cadastro.html" class="atalho-card">
+          <div class="atalho-icone">🏪</div>
+          <div><strong>Gerenciar loja</strong><span>Acesse o painel</span></div>
+        </a>
+        <a href="#" class="atalho-card">
+          <div class="atalho-icone">⭐</div>
+          <div><strong>Avaliações</strong><span>Veja os mais queridos</span></div>
+        </a>
+      </div>
+
+      <div class="banner-zyra">
+        <span>Seleção da semana</span>
+        <h2>Produtos daqui, escolhidos para você.</h2>
+        <a href="buscar.html" class="btn-explorar">Explorar agora</a>
+      </div>
+
+      <div class="secao-header">
+        <div><span class="subtitulo">Volte a explorar</span><h2>Acessados recentemente</h2></div>
+        <a href="buscar.html">Ver todos</a>
+      </div>
+      
+      <div class="carrossel">
+        <a href="buscar.html" class="card-produto-mini">
+          <img src="https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?w=400" alt="Queijos">
+          <div class="info"><strong>Tábua de Queijos</strong><span class="preco">R$ 79,90</span></div>
+        </a>
+        <a href="buscar.html" class="card-produto-mini">
+          <img src="https://images.unsplash.com/photo-1606740220070-05881960b6f1?w=400" alt="Artesanato">
+          <div class="info"><strong>Manta Caminhos</strong><span class="preco">R$ 138,00</span></div>
+        </a>
+        <a href="buscar.html" class="card-produto-mini">
+          <img src="https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?w=400" alt="Brinco">
+          <div class="info"><strong>Brinco Rio</strong><span class="preco">R$ 48,00</span></div>
+        </a>
+      </div>
+
+      <div class="secao-header">
+        <div><span class="subtitulo">Feito para você</span><h2>Recomendações locais</h2></div>
+      </div>
+
+      <div id="lista-produtos"></div>
+    </main>
+
+    <nav class="bottom-nav">
+      <a href="index.html" class="ativo">
+        <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>Início
+      </a>
+      <a href="buscar.html">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>Buscar
+      </a>
+      <a href="carrinho.html">
+        <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>Compras
+      </a>
+      <a href="cadastro.html">
+        <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>Painel
+      </a>
+    </nav>
+  </div>
+  <script type="module" src="js/loja.js"></script>
+</body>
+</html>

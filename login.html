@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entrar - Zyra</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="page-header">
+      <h1>Acessar Zyra</h1>
+      <p>Entre para gerenciar sua loja ou comprar.</p>
+    </header>
+
+    <main class="conteudo" style="padding-top:0">
+      <form id="form-login">
+        <div class="input-group">
+          <label>Email</label>
+          <input type="email" id="email-login" required placeholder="seu@email.com">
+        </div>
+        <div class="input-group">
+          <label>Senha</label>
+          <input type="password" id="senha-login" required>
+        </div>
+        <button type="submit" class="btn-primario">Entrar</button>
+        <div id="msg-login" style="display:none; margin-top:12px;"></div>
+      </form>
+
+      <div style="text-align: center; margin-top: 24px;">
+        <p style="font-size: 14px; color: var(--texto-suave);">Não tem conta?</p>
+        <a href="registro.html" style="color: var(--roxo-zyra); font-weight: 600; font-size: 14px; text-decoration: none;">Criar conta agora</a>
+      </div>
+    </main>
+
+    <nav class="bottom-nav">
+      <a href="index.html"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>Início</a>
+      <a href="#"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>Buscar</a>
+      <a href="carrinho.html"><svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>Compras</a>
+      <a href="login.html" class="ativo"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>Painel</a>
+    </nav>
+  </div>
+  <script type="module" src="js/auth.js"></script>
+</body>
+</html>
